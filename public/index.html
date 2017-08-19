@@ -22,9 +22,6 @@
 
   <div id="bgImg" class="bgimg"></div>
   <div class="main-content">
-    <div class="topleft" ng-app="noTeRayesCoApp" ng-controller="visits">
-      <p>Ya somos {{nVisits}} ansiosos!</p>
-    </div>
     <div class="middle">
       <div id="message">
         <h1>No te rayes CO, que sólo quedan</h1>
@@ -82,15 +79,6 @@
         document.getElementById("message").innerHTML = '<h3>NO TE RAYES CO,</h3><h1>¡QUE SON PILARESSSSS!</h1>';
       }
     }, 1000);
-  </script>
-
-  <script>
-    var app = angular.module('noTeRayesCoApp', []);
-    app.controller('visits', function ($scope, $http) {
-      $http.get("getVisits").then(function (response) {
-        $scope.nVisits = response.data;
-      });
-    })
   </script>
 </body>
 
